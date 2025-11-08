@@ -1,0 +1,43 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Default layout: 4 columns */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px 5px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.box {
+  border: 2px solid fuchsia;
+  height: 200px;
+  padding: 10px;
+}
+
+/* CODE ALONG — at min-width:768px → change to 3 columns & border color */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .box {
+    border: 2px solid blue;
+  }
+}
+
+/* INDEPENDENT PRACTICE — at min-width:390px → 2 columns + size changes */
+@media (min-width: 390px) and (max-width: 767px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .box {
+    height: 100px;
+    padding: 5px;
+    border: 1px solid fuchsia;
+  }
+}
